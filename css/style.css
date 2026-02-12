@@ -54,20 +54,22 @@ body {
 }
 
 .header-profile {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-lg);
+    position: relative;
     margin-bottom: var(--spacing-lg);
+    padding-right: 100px; /* Space for photo */
 }
 
 .profile-photo {
-    flex-shrink: 0;
-    width: 180px;
-    height: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .profile-photo img {
@@ -77,7 +79,7 @@ body {
 }
 
 .profile-info {
-    flex: 1;
+    width: 100%;
 }
 
 .name {
@@ -429,15 +431,17 @@ body {
     }
     
     .header-profile {
-        flex-direction: column;
-        text-align: center;
-        gap: var(--spacing-md);
+        position: relative;
+        padding-right: 90px; /* Slightly less space for smaller screens */
+        text-align: left;
     }
     
     .profile-photo {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+        top: 0;
+        right: 0;
+        margin: 0;
     }
     
     .profile-info {
