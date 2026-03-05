@@ -1,287 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Xu - Resume</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>许炜 Alex Xu - Resume</title>
+<style>
+  @page { size: A4; margin: 15mm 18mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif; color: #2c2c2c; font-size: 13px; line-height: 1.6; background: #fff; }
+  .page { max-width: 780px; margin: 0 auto; padding: 30px 40px; }
+
+  .lang-divider { border: none; border-top: 3px dashed #1a3a5c; margin: 40px 0 28px 0; }
+  .lang-label { text-align: center; font-size: 12px; color: #888; margin-bottom: 30px; }
+
+  .header { display: flex; align-items: center; justify-content: space-between; padding-bottom: 18px; border-bottom: 3px solid #1a3a5c; margin-bottom: 22px; }
+  .header-photo { width: 105px; height: 130px; border-radius: 4px; flex-shrink: 0; overflow: hidden; border: 2px solid #ddd; }
+  .header-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .header-info h1 { font-size: 28px; font-weight: 700; color: #1a3a5c; margin-bottom: 6px; }
+  .header-meta { font-size: 13px; color: #555; line-height: 1.9; }
+  .header-meta span { margin-right: 16px; }
+
+  .section { margin-bottom: 20px; }
+  .section-title { font-size: 15px; font-weight: 700; color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 4px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .summary { font-size: 13px; color: #333; line-height: 1.7; }
+  .summary p { margin-bottom: 8px; }
+
+  .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
+  .exp-company { font-size: 15px; font-weight: 700; color: #1a3a5c; }
+  .exp-period { font-size: 12px; color: #666; font-weight: 600; white-space: nowrap; }
+  .exp-title { font-size: 13px; font-weight: 600; color: #444; margin-bottom: 6px; }
+  .exp-note { font-size: 12px; color: #888; margin-bottom: 6px; }
+  .exp-block { margin-bottom: 20px; }
+  .exp-block ul { padding-left: 18px; }
+  .exp-block li { margin-bottom: 5px; line-height: 1.6; }
+  .exp-block li strong { color: #1a3a5c; }
+
+  .edu-item { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .edu-school { font-weight: 700; color: #1a3a5c; }
+  .edu-degree { font-size: 13px; color: #444; margin-left: 10px; }
+  .edu-year { font-size: 13px; color: #666; white-space: nowrap; }
+
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+  .skill-tag { background: #eef2f7; color: #1a3a5c; padding: 3px 10px; border-radius: 3px; font-size: 12px; font-weight: 600; }
+
+  .target-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; font-size: 13px; }
+  .target-item { padding: 3px 0; }
+  .target-label { color: #888; margin-right: 6px; }
+  .target-value { color: #2c2c2c; font-weight: 600; }
+
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { padding: 0; }
+    .lang-divider { page-break-before: always; border: none; margin: 0; }
+    .lang-label { display: none; }
+  }
+</style>
 </head>
 <body>
-    <div class="resume-container">
-        <!-- Header -->
-        <header class="resume-header">
-            <div class="header-content">
-                <div class="header-profile">
-                    <div class="profile-photo">
-                        <img src="profile-photo.jpg" alt="Alex Xu Photo">
-                    </div>
-                    <div class="profile-info">
-                        <h1 class="name">Alex Xu (许炜)</h1>
-                        <h2 class="title">Strategic Leader | Electronics & Optical Communications Expert</h2>
-                        <p class="tagline">20+ years in electronics & optical communications, transforming sales leadership into market intelligence thought leadership</p>
-                    </div>
-                </div>
-                
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>alexkyo@msn.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+86 185 2105 9077</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Shanghai, China</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-language"></i>
-                        <span>Chinese (Native), English (Fluent), Japanese (Fluent)</span>
-                    </div>
-                </div>
-            </div>
-        </header>
+<div class="page">
 
-        <!-- Main Content -->
-        <main class="resume-content">
-            <!-- Executive Summary -->
-            <section class="section" id="summary">
-                <h2 class="section-title">
-                    <i class="fas fa-user-tie"></i>
-                    Executive Summary
-                </h2>
-                <div class="section-content">
-                    <p>Strategic leader with <strong>20+ years of experience</strong> in electronics and optical communications industries. Proven track record of driving revenue growth, managing P&L of <strong>¥400M (USD $56M)</strong>, and leading teams of 19+ professionals. Currently transitioning from sales leadership to market intelligence and thought leadership, with a focus on optical communications research and analysis.</p>
-                </div>
-            </section>
+  <!-- ==================== 中文版 ==================== -->
 
-            <!-- Education - Highlighted as per requirements -->
-            <section class="section" id="education">
-                <h2 class="section-title">
-                    <i class="fas fa-graduation-cap"></i>
-                    Education
-                </h2>
-                <div class="section-content">
-                    <div class="education-item">
-                        <div class="edu-header">
-                            <h3>Fudan University</h3>
-                            <span class="date">2016 - 2018</span>
-                        </div>
-                        <p class="degree">Master of Business Administration (MBA)</p>
-                        <p class="details">Focus on strategic management, market analysis, and leadership development.</p>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="edu-header">
-                            <h3>Shanghai University</h3>
-                            <span class="date">2000 - 2004</span>
-                        </div>
-                        <p class="degree">Bachelor of Business Administration</p>
-                        <p class="details">Comprehensive business education with focus on marketing and management.</p>
-                    </div>
-                </div>
-            </section>
+  <div class="header">
+    <div class="header-info">
+      <h1>许炜 &nbsp;<span style="font-size:18px;font-weight:500;color:#555;">Alex Xu</span></h1>
+      <div class="header-meta">
+        <span>男 | 43岁（1982/06）</span><br>
+        <span>上海</span><br>
+        <span>18521059077</span>
+        <span>alexkyo@msn.com</span><br>
+        <span>语言：中文（母语）/ 英语（流利）/ 日语（流利）</span>
+      </div>
+    </div>
+    <div class="header-photo">
+      <img src="profile-photo.jpg" alt="许炜 Alex Xu">
+    </div>
+  </div>
 
-            <!-- Leadership Experience -->
-            <section class="section" id="experience">
-                <h2 class="section-title">
-                    <i class="fas fa-briefcase"></i>
-                    Leadership Experience
-                </h2>
-                <div class="section-content">
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <h3>Fujikura (藤仓)</h3>
-                            <span class="date">Aug 2014 - May 2025</span>
-                        </div>
-                        <p class="position">Deputy Sales Director</p>
-                        <div class="leadership-highlight">
-                            <i class="fas fa-users"></i>
-                            <span><strong>Leadership:</strong> Managed team of 19 across Shanghai, Beijing, Shenzhen</span>
-                        </div>
-                        <div class="leadership-highlight">
-                            <i class="fas fa-chart-line"></i>
-                            <span><strong>P&L Responsibility:</strong> ¥400M annual revenue (approx. $56M USD)</span>
-                        </div>
-                        <ul class="achievements">
-                            <li>Led 5G market strategy, accurately predicting G.652 vs G.654.E fiber demand, securing procurement leadership share and achieving 15% YoY growth</li>
-                            <li>Established ¥200M+ project pipeline model for strategic planning</li>
-                            <li>Provided quarterly macroeconomic and competitive analysis reports to global headquarters</li>
-                            <li>Managed key relationships with China Mobile, China Telecom, China Unicom, Huawei, ZTE</li>
-                        </ul>
-                    </div>
+  <div class="section">
+    <div class="section-title">求职意向</div>
+    <div class="target-grid">
+      <div class="target-item"><span class="target-label">岗位：</span><span class="target-value">销售总监 / 大客户总监 / 营业部长</span></div>
+      <div class="target-item"><span class="target-label">地点：</span><span class="target-value">上海</span></div>
+      <div class="target-item"><span class="target-label">薪资：</span><span class="target-value">30K–60K × 15薪</span></div>
+      <div class="target-item"><span class="target-label">行业：</span><span class="target-value">电子零部件 / 光通信 / 工业自动化 / 汽车电子 / 连接器</span></div>
+    </div>
+  </div>
 
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <h3>Omron (欧姆龙)</h3>
-                            <span class="date">Jan 2010 - Aug 2014</span>
-                        </div>
-                        <p class="position">Sales Manager</p>
-                        <div class="leadership-highlight">
-                            <i class="fas fa-chart-bar"></i>
-                            <span><strong>Regional Leadership:</strong> Eastern & Central China regions</span>
-                        </div>
-                        <div class="leadership-highlight">
-                            <i class="fas fa-dollar-sign"></i>
-                            <span><strong>Revenue:</strong> $40M annual sales</span>
-                        </div>
-                        <ul class="achievements">
-                            <li>Pioneered Wuhan market from zero to ¥2M sales in first year</li>
-                            <li>First local manager promoted to lead Japanese client department</li>
-                            <li>Managed strategic accounts: ABB, Siemens, Schneider, Bosch</li>
-                        </ul>
-                    </div>
+  <div class="section">
+    <div class="section-title">优势亮点</div>
+    <div class="summary">
+      <p>战略型销售与市场领导者，拥有逾<strong>20年在头部日资制造企业的销售管理经验</strong>，涵盖电子零部件、光通信、工业自动化等领域。</p>
+      <p>核心优势：<strong>规模化团队管理</strong>（19人跨城市团队，年度4亿人民币P&amp;L）、<strong>深度客户网络</strong>（三大运营商、华为、中兴、西门子、ABB等）、<strong>市场洞察力</strong>（凭借一线资源直接验证趋势）、<strong>新市场开拓</strong>（从零到一建立区域市场）。三语能力（中文母语 / 英语 / 日语），可直接对接日本或欧美总部。复旦大学MBA（985/211）。</p>
+    </div>
+  </div>
 
-                    <div class="experience-item">
-                        <div class="exp-header">
-                            <h3>TDK</h3>
-                            <span class="date">Sep 2004 - Jan 2010</span>
-                        </div>
-                        <p class="position">Sales Supervisor</p>
-                        <div class="leadership-highlight">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span><strong>Technical Expertise:</strong> Completed comprehensive MLCC technical training at Japanese factory</span>
-                        </div>
-                        <div class="leadership-highlight">
-                            <i class="fas fa-dollar-sign"></i>
-                            <span><strong>Revenue:</strong> $2.4M annual sales</span>
-                        </div>
-                        <ul class="achievements">
-                            <li>Transitioned from sales to technical consultant for R&D clients</li>
-                            <li>Managed key accounts: Hitachi, Sharp, Panasonic, Alps</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+  <div class="section">
+    <div class="section-title">核心能力</div>
+    <div class="skills-grid">
+      <span class="skill-tag">大客户管理</span>
+      <span class="skill-tag">团队领导（19人）</span>
+      <span class="skill-tag">P&amp;L管理（4亿RMB）</span>
+      <span class="skill-tag">新市场从零开发</span>
+      <span class="skill-tag">市场预测与竞争情报</span>
+      <span class="skill-tag">直销 / 代理 / OEM渠道</span>
+      <span class="skill-tag">跨文化沟通（中日英）</span>
+      <span class="skill-tag">复旦大学MBA</span>
+    </div>
+  </div>
 
-            <!-- Industry Knowledge - Highlighted as per requirements -->
-            <section class="section" id="knowledge">
-                <h2 class="section-title">
-                    <i class="fas fa-industry"></i>
-                    Electronics & Optical Communications Expertise
-                </h2>
-                <div class="section-content">
-                    <div class="knowledge-grid">
-                        <div class="knowledge-category">
-                            <h3><i class="fas fa-microchip"></i> Electronics</h3>
-                            <ul>
-                                <li>MLCC (Multi-Layer Ceramic Capacitors)</li>
-                                <li>Electronic Components</li>
-                                <li>Industrial Automation</li>
-                                <li>Sensor Technologies</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="knowledge-category">
-                            <h3><i class="fas fa-fiber"></i> Optical Communications</h3>
-                            <ul>
-                                <li>Fiber Optics (G.652, G.654.E)</li>
-                                <li>CPO (Co‑Packaged Optics)</li>
-                                <li>HCF (Hollow Core Fiber)</li>
-                                <li>MCF (Multi‑Core Fiber)</li>
-                                <li>5G Infrastructure</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="knowledge-category">
-                            <h3><i class="fas fa-chart-network"></i> Market Intelligence</h3>
-                            <ul>
-                                <li>Strategic Market Analysis</li>
-                                <li>Competitive Intelligence</li>
-                                <li>Technology Trend Forecasting</li>
-                                <li>P&L Management</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+  <div class="section">
+    <div class="section-title">工作经历</div>
 
-            <!-- Skills & Competencies -->
-            <section class="section" id="skills">
-                <h2 class="section-title">
-                    <i class="fas fa-star"></i>
-                    Core Competencies
-                </h2>
-                <div class="section-content">
-                    <div class="skills-container">
-                        <div class="skill-category">
-                            <h3>Leadership</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Team Management (19+)</span>
-                                <span class="skill-tag">P&L Responsibility</span>
-                                <span class="skill-tag">Strategic Planning</span>
-                                <span class="skill-tag">Cross‑Cultural Leadership</span>
-                                <span class="skill-tag">Mentoring & Development</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Technical Expertise</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Optical Communications</span>
-                                <span class="skill-tag">Fiber Optics</span>
-                                <span class="skill-tag">MLCC Technology</span>
-                                <span class="skill-tag">5G Infrastructure</span>
-                                <span class="skill-tag">Market Intelligence</span>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3>Business Acumen</h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Strategic Sales</span>
-                                <span class="skill-tag">Key Account Management</span>
-                                <span class="skill-tag">Market Analysis</span>
-                                <span class="skill-tag">Competitive Strategy</span>
-                                <span class="skill-tag">Relationship Building</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Additional Info -->
-            <section class="section" id="additional">
-                <h2 class="section-title">
-                    <i class="fas fa-info-circle"></i>
-                    Additional Information
-                </h2>
-                <div class="section-content">
-                    <div class="additional-grid">
-                        <div class="additional-item">
-                            <h3><i class="fas fa-language"></i> Languages</h3>
-                            <p><strong>Chinese:</strong> Native<br>
-                            <strong>English:</strong> Fluent (Business & Technical)<br>
-                            <strong>Japanese:</strong> Fluent (Business & Technical)</p>
-                        </div>
-                        
-                        <div class="additional-item">
-                            <h3><i class="fas fa-bullseye"></i> Career Transition</h3>
-                            <p>Transitioning from <strong>sales leadership</strong> to <strong>market intelligence thought leadership</strong>, targeting roles in research analysis (e.g., Omdia industry analyst).</p>
-                        </div>
-                        
-                        <div class="additional-item">
-                            <h3><i class="fas fa-user-tag"></i> Profile Type</h3>
-                            <p><strong>Elite Individual Contributor</strong> – Exceptional strategic thinking and execution capabilities, excelling as a high-impact individual performer rather than a traditional people manager.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="resume-footer">
-            <p>Last updated: February 2026 | Resume available online at <span class="url">https://alex-resume.vercel.app</span></p>
-            <p class="print-note"><i class="fas fa-print"></i> This resume is optimized for both digital viewing and printing.</p>
-        </footer>
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-company">藤仓（中国）有限公司</span>
+        <span class="exp-period">2014/08 — 2025/05（10年9个月）</span>
+      </div>
+      <div class="exp-title">销售副总监 · 中国区销售与市场</div>
+      <div class="exp-note">藤仓株式会社（日本东证上市）— 光纤熔接机全球市场份额第一，光通信核心器件领军厂商</div>
+      <ul>
+        <li><strong>团队与P&amp;L管理：</strong>领导19人销售团队（上海/北京/深圳），全责管理年度4亿人民币P&amp;L；推动团队从执行导向转型为数据驱动型战略销售体系。</li>
+        <li><strong>战略客户管理：</strong>主导与中国移动、中国电信、中国联通及华为、中兴等战略客户的高层关系维护；为总部产品路线图与定价策略提供一线市场决策依据。</li>
+        <li><strong>市场预测与情报：</strong>构建超过2亿人民币的项目漏斗预测模型，向全球总部提供季度竞争对手分析，识别数据中心、工业激光等新兴市场机会。</li>
+        <li><strong>新客户开拓：</strong>借助运营商及华为渠道，成功导入银行与政府数据中心客户，首年销售额达500万人民币。</li>
+        <li><strong>5G市场布局：</strong>前瞻性预判5G建设路径，提前布局资源，5G建设高峰期推动年收入增长15%。</li>
+      </ul>
     </div>
 
-    <!-- JavaScript for interactive elements -->
-    <script src="js/script.js"></script>
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-company">欧姆龙电子部件贸易（上海）有限公司</span>
+        <span class="exp-period">2010/01 — 2014/08（4年7个月）</span>
+      </div>
+      <div class="exp-title">销售经理 · 华东区</div>
+      <div class="exp-note">产品线：变频器、PLC、继电器、传感器、开关、连接器</div>
+      <ul>
+        <li><strong>区域销售管理：</strong>带领4人团队（含1名日籍）负责华东区，年销售额400万美元；部门年增长率108%。</li>
+        <li><strong>华中市场从零开发：</strong>受命赴武汉独立开发华中市场，全权主导，驻扎一年内实现销售额200万人民币；回沪后获晋升为销售经理。</li>
+        <li><strong>主要客户：</strong>松下、三菱、西门子、施耐德、ABB、富士电机、日立、安川等，覆盖工业控制、医疗、电力、楼宇控制、家电等应用领域。</li>
+        <li><strong>中日沟通桥梁：</strong>每半年赴日述职，担任中国销售经验向日本总部传导的核心窗口。</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-company">TDK电子（上海）贸易有限公司</span>
+        <span class="exp-period">2004/09 — 2010/01（5年4个月）</span>
+      </div>
+      <div class="exp-title">销售主管 · 华东区日系大客户</div>
+      <div class="exp-note">产品线：MLCC电容、电感、传感器、磁性元器件</div>
+      <ul>
+        <li><strong>大客户管理：</strong>主管华东区日系大型电子厂商，月均担当销售额约1亿日元；Hitachi及Mitsumi市场占有率均超70%。</li>
+        <li><strong>业绩增长：</strong>2006、2007年度所负责客户销售额增长率分别达140%和130%，大幅超越预算目标；每年稳定实现10件以上新品Design In。</li>
+        <li><strong>荣誉：</strong>荣获2007年度NIDEC最佳供应商奖。</li>
+        <li><strong>主要客户：</strong>Pioneer、Alpine、Alps、Hitachi、Mitsumi、NIDEC Group等。</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">教育经历</div>
+    <div class="edu-item">
+      <div><span class="edu-school">复旦大学</span><span class="edu-degree">— MBA，工商管理（985/211）</span></div>
+      <span class="edu-year">2016 — 2019</span>
+    </div>
+    <div class="edu-item">
+      <div><span class="edu-school">上海大学</span><span class="edu-degree">— 本科，工商管理（211）</span></div>
+      <span class="edu-year">2000 — 2004</span>
+    </div>
+  </div>
+
+  <!-- ==================== 分隔线 ==================== -->
+  <hr class="lang-divider">
+  <div class="lang-label">— English Version —</div>
+
+  <!-- ==================== 英文版 ==================== -->
+
+  <div class="header">
+    <div class="header-info">
+      <h1>Alex Xu &nbsp;<span style="font-size:18px;font-weight:500;color:#555;">许炜</span></h1>
+      <div class="header-meta">
+        <span>Male | 43 (1982/06)</span><br>
+        <span>Shanghai, China</span><br>
+        <span>18521059077</span>
+        <span>alexkyo@msn.com</span><br>
+        <span>Languages: Mandarin (Native) | English (Fluent) | Japanese (Fluent)</span>
+      </div>
+    </div>
+    <div class="header-photo">
+      <img src="profile-photo.jpg" alt="Alex Xu">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Target Role</div>
+    <div class="target-grid">
+      <div class="target-item"><span class="target-label">Title:</span><span class="target-value">Sales Director / Key Account Director / GM</span></div>
+      <div class="target-item"><span class="target-label">Location:</span><span class="target-value">Shanghai</span></div>
+      <div class="target-item"><span class="target-label">Package:</span><span class="target-value">RMB 30K–60K × 15 months</span></div>
+      <div class="target-item"><span class="target-label">Industry:</span><span class="target-value">Electronics Components | Optical Comms | Automation | Automotive | Connectors</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary">
+      <p>Sales leader with <strong>20+ years at top-tier Japanese manufacturers</strong> (TDK, OMRON, Fujikura) across electronics components, optical communications, and industrial automation. Proven record managing large teams, multi-hundred-million RMB P&amp;Ls, and strategic accounts including China's Big Three carriers, Huawei, ZTE, Siemens, and ABB.</p>
+      <p>Trilingual (Mandarin / English / Japanese) with direct Japan HQ reporting experience. Fudan University MBA (Top 10 China). Ready to drive revenue growth for European, American, or Japanese multinationals targeting the China market.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="skills-grid">
+      <span class="skill-tag">Key Account Management</span>
+      <span class="skill-tag">Team Leadership (19 staff)</span>
+      <span class="skill-tag">P&amp;L Ownership (CNY 400M)</span>
+      <span class="skill-tag">0-to-1 Market Development</span>
+      <span class="skill-tag">Market Forecasting &amp; Intelligence</span>
+      <span class="skill-tag">Direct / Distributor / OEM Channels</span>
+      <span class="skill-tag">Cross-Cultural (JP / CN / EN)</span>
+      <span class="skill-tag">Fudan MBA</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-company">Fujikura (China) Co., Ltd.</span>
+        <span class="exp-period">Aug 2014 — May 2025 (10 yr 9 mo)</span>
+      </div>
+      <div class="exp-title">Deputy Sales Director — China Sales &amp; Marketing</div>
+      <div class="exp-note">Fujikura Corp. (TSE-listed) — Global #1 in optical fiber fusion splicers; leading optical communication components supplier</div>
+      <ul>
+        <li><strong>Team &amp; P&amp;L:</strong> Led 19-person team across Shanghai, Beijing, Shenzhen. Full ownership of CNY 400M annual P&amp;L. Transformed team from execution-driven to data-driven strategic sales.</li>
+        <li><strong>Strategic Accounts:</strong> Managed senior-level relationships with China Mobile, China Telecom, China Unicom, Huawei, and ZTE. Ground-truth insights directly informed global product roadmap and pricing.</li>
+        <li><strong>Pipeline &amp; Intelligence:</strong> Built CNY 200M+ project pipeline model. Delivered quarterly competitive and macro analysis to global HQ; identified emerging opportunities in data centers and industrial laser markets.</li>
+        <li><strong>New Business:</strong> Developed banking and government data center clients via carrier and OEM channels — CNY 5M revenue in Year 1.</li>
+        <li><strong>5G Strategy:</strong> Anticipated 5G infrastructure buildout ahead of market. Early positioning drove 15% YoY revenue growth at peak cycle.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-company">OMRON Electronic Components Trading (Shanghai)</span>
+        <span class="exp-period">Jan 2010 — Aug 2014 (4 yr 7 mo)</span>
+      </div>
+      <div class="exp-title">Sales Manager — East China</div>
+      <div class="exp-note">Products: Inverters, PLCs, Relays, Sensors, Switches, Connectors</div>
+      <ul>
+        <li><strong>Regional Sales:</strong> Led 4-person team (incl. 1 Japanese national). USD 4M annual revenue; department YoY growth 108%.</li>
+        <li><strong>Greenfield Market (0→1):</strong> Deployed to Wuhan as sole representative to build Central China from scratch. Achieved CNY 2M in Year 1; promoted to Sales Manager upon return.</li>
+        <li><strong>Key Accounts:</strong> Panasonic, Mitsubishi, Siemens, Schneider, ABB, Fuji Electric, Hitachi, Yaskawa. Verticals: industrial automation, medical, power, building control, home appliances.</li>
+        <li><strong>Japan HQ Bridge:</strong> Biannual business reviews in Japan; core liaison for China-Japan knowledge transfer.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <div class="exp-header">
+        <span class="exp-company">TDK Electronics Trading (Shanghai) Co., Ltd.</span>
+        <span class="exp-period">Sep 2004 — Jan 2010 (5 yr 4 mo)</span>
+      </div>
+      <div class="exp-title">Sales Supervisor — Japanese Key Accounts, East China</div>
+      <div class="exp-note">Products: MLCCs, Inductors, Sensors, Magnetic Components</div>
+      <ul>
+        <li><strong>Key Accounts:</strong> Managed approx. JPY 100M/month in account revenue. Achieved 70%+ market share at Hitachi and Mitsumi.</li>
+        <li><strong>Growth:</strong> Delivered 140% and 130% YoY sales growth in FY2006 and FY2007, significantly exceeding quota. 10+ new design-ins per year.</li>
+        <li><strong>Award:</strong> Won 2007 NIDEC Best Supplier Award.</li>
+        <li><strong>Accounts:</strong> Pioneer, Alpine, Alps, Hitachi, Mitsumi, NIDEC Group — automotive, consumer electronics, industrial.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div><span class="edu-school">Fudan University</span><span class="edu-degree">— MBA, Business Administration (Top 10 China, 985)</span></div>
+      <span class="edu-year">2016 — 2019</span>
+    </div>
+    <div class="edu-item">
+      <div><span class="edu-school">Shanghai University</span><span class="edu-degree">— B.Mgmt, Business Administration (211)</span></div>
+      <span class="edu-year">2000 — 2004</span>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
