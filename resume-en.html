@@ -1,136 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Xu | English Resume</title>
-  <meta name="description" content="One-page English executive resume for Alex Xu.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/resume.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Xu — Resume (English)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --accent: #1a3a5c;
+    --accent-light: #2c5f8a;
+    --rule: #c0ccd8;
+    --muted: #555;
+    --body-font: 'Fira Code', 'Fira Mono', 'Consolas', monospace;
+    --page-width: 860px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--body-font);
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: #222;
+    background: #fff;
+  }
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 16px;
+    background: rgba(255,255,255,0.92);
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .toolbar a,
+  .toolbar button {
+    font: inherit;
+    color: var(--accent);
+    border: 1px solid var(--rule);
+    background: #fff;
+    border-radius: 999px;
+    padding: 8px 14px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .page {
+    max-width: var(--page-width);
+    margin: 0 auto;
+    padding: 40px 48px 48px;
+  }
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    padding-bottom: 22px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 24px;
+  }
+  .header-photo {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+    flex-shrink: 0;
+  }
+  .header-info { flex: 1; }
+  .header-name {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+  }
+  .header-name span {
+    font-family:'等距更纱黑体 SC','Sarasa Mono SC','Noto Sans SC','Microsoft YaHei',sans-serif;
+    font-size:1rem;
+    font-weight:400;
+    color: var(--muted);
+    margin-left: 10px;
+    letter-spacing: 0;
+  }
+  .header-title {
+    font-size: 0.95rem;
+    color: var(--accent-light);
+    font-weight: 600;
+    margin: 4px 0 10px;
+    letter-spacing: 0.3px;
+  }
+  .header-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+  .header-meta a { color: var(--muted); text-decoration: none; border-bottom: 1px dotted #aaa; }
+  .section { margin-bottom: 20px; }
+  .section-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 4px;
+    margin-bottom: 12px;
+  }
+  .summary p {
+    font-size: 13.5px;
+    color: #333;
+    line-height: 1.7;
+  }
+  .summary strong { color: var(--accent); }
+  .tags {
+    display: block;
+    line-height: 2;
+    color: #333;
+    font-size: 12.5px;
+  }
+  .tag {
+    display: inline;
+  }
+  .tag + .tag::before {
+    content: ' · ';
+    color: #999;
+    padding: 0 2px;
+  }
+  .job { margin-bottom: 18px; }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .job-company {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .job-dates {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .job-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    margin: 1px 0;
+  }
+  .job-context {
+    font-size: 11.5px;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 7px;
+  }
+  .job ul { padding-left: 16px; }
+  .job li {
+    margin-bottom: 4px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .job li strong { color: #1a3a5c; }
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+  .edu-school { font-weight: 700; color: var(--accent); font-size: 13.5px; }
+  .edu-dates { font-size: 12px; color: var(--muted); }
+  .edu-degree { font-size: 12.5px; color: #444; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 32px;
+    font-size: 12.5px;
+  }
+  .skills-grid dt { font-weight: 600; color: var(--accent); display: inline; }
+  .skills-grid dd { display: inline; color: #444; margin-left: 4px; }
+  .skills-grid dl { margin: 0; }
+  @media print {
+    body { font-size: 12.5px; }
+    .toolbar { display: none; }
+    .page { padding: 28px 36px; }
+    a { color: inherit !important; border-bottom: none !important; }
+  }
+</style>
 </head>
-<body class="resume-body">
-  <div class="resume-toolbar no-print">
-    <a href="index.html">Home</a>
-    <a href="resume-zh.html">中文简历</a>
-    <a href="pdf/Alex-Xu-Resume-EN.pdf">Download PDF</a>
-    <button type="button" data-print>Print / Save PDF</button>
+<body>
+<div class="toolbar">
+  <a href="./index.html">Home</a>
+  <a href="./resume-zh.html">中文</a>
+  <a href="./pdf/Alex-Xu-Resume-EN.pdf">PDF</a>
+  <button type="button" data-print>Print</button>
+</div>
+
+<div class="page">
+<header class="header">
+  <img class="header-photo"
+       src="./profile-photo.jpg"
+       alt="Alex Xu photo"
+       onerror="this.style.display='none'">
+  <div class="header-info">
+    <div class="header-name">Alex Xu <span>许炜</span></div>
+    <div class="header-title">Sales Director &nbsp;|&nbsp; Business Development &nbsp;|&nbsp; Key Account Management</div>
+    <div class="header-meta">
+      <span>📍 Shanghai, China</span>
+      <span>📞 <a href="tel:+8618521059077">+86 185-2105-9077</a></span>
+      <span>✉️ <a href="mailto:alexkyo@msn.com">alexkyo@msn.com</a></span>
+      <span>🌐 Mandarin (Native) &nbsp;|&nbsp; English (Fluent) &nbsp;|&nbsp; Japanese (Fluent)</span>
+    </div>
+  </div>
+</header>
+
+<section class="section summary">
+  <div class="section-title">Professional Summary</div>
+  <p>
+    Senior commercial leader and industry advisor with <strong>20+ years</strong> driving revenue growth at top-tier Japanese manufacturers
+    (TDK, OMRON, Fujikura) across electronics components, optical communications, and industrial automation.
+    Track record of <strong>building businesses from zero</strong>: opened OMRON's Central China office independently
+    (CNY 2M Year-1); pioneered banking &amp; government data center verticals at Fujikura (CNY 5M Year-1).
+    Deep domain expertise in <strong>optical fiber infrastructure</strong> — FTTH/FTTB, 5G fronthaul &amp; backhaul, data center interconnect (DCI), and carrier network deployment across China's Big Three operators.
+    Experienced in delivering <strong>market intelligence, go-to-market strategy, and commercial advisory</strong> to global HQ (Japan &amp; Europe), bridging China market dynamics with international decision-making.
+    Managed <strong>multi-hundred-million RMB P&amp;Ls</strong>, 19-person cross-city sales teams, and C-level relationships at China Mobile, China Telecom, Huawei, ZTE, Siemens, and ABB.
+    Trilingual (Mandarin / English / Japanese) with direct Japan &amp; Europe HQ reporting experience.
+    <strong>Fudan University MBA</strong> (Top 10 China).
+  </p>
+</section>
+
+<section class="section">
+  <div class="section-title">Core Competencies</div>
+  <div class="tags">
+    <span class="tag">Sales Leadership · 19-person team</span>
+    <span class="tag">P&amp;L Ownership · CNY 400M</span>
+    <span class="tag">Key Account Management</span>
+    <span class="tag">0-to-1 Market Entry</span>
+    <span class="tag">New Business Development</span>
+    <span class="tag">Pipeline &amp; Revenue Forecasting</span>
+    <span class="tag">Channel Strategy (Direct / Distributor / OEM)</span>
+    <span class="tag">Competitive Intelligence &amp; Market Advisory</span>
+    <span class="tag">Go-to-Market Strategy</span>
+    <span class="tag">Optical Fiber Infrastructure (FTTH / 5G / DCI)</span>
+    <span class="tag">Carrier Network · Telecom Ecosystem</span>
+    <span class="tag">Industrial Automation · Electronics Components</span>
+    <span class="tag">Cross-Cultural Leadership (JP / CN / EN)</span>
+    <span class="tag">Design-In &amp; Technical Sales</span>
+    <span class="tag">Fudan MBA</span>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-title">Work Experience</div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">Fujikura (China) Co., Ltd.</span>
+      <span class="job-dates">Aug 2014 – May 2025 &nbsp;(10 yr 9 mo)</span>
+    </div>
+    <div class="job-title">Deputy Sales Director — China Sales &amp; Marketing</div>
+    <div class="job-context">Fujikura Corp. (TSE-listed) — Global #1 optical fiber fusion splicers; leading optical communication components supplier</div>
+    <ul>
+      <li><strong>P&amp;L &amp; Team Leadership:</strong> Led a 19-person sales team across Shanghai, Beijing, and Shenzhen with full ownership of a CNY 400M annual P&amp;L. Transformed the team from execution-driven to a data-driven strategic sales organization. Reported directly to the Vice General Manager (expatriate).</li>
+      <li><strong>Strategic Account Management:</strong> Managed senior-level relationships with China Mobile, China Telecom, China Unicom, Huawei, and ZTE. Customer insights directly informed global product roadmap and pricing strategy.</li>
+      <li><strong>Pipeline &amp; Revenue Forecasting:</strong> Built a CNY 200M+ project pipeline model using quantitative analysis; identified emerging opportunities in data centers and industrial laser markets. Delivered quarterly competitive intelligence and macro market reports to global HQ.</li>
+      <li><strong>New Business Development:</strong> Opened banking and government data center verticals via carrier and OEM channels — CNY 5M revenue in Year 1.</li>
+      <li><strong>5G Market Strategy:</strong> Anticipated 5G infrastructure buildout ahead of market by engaging carrier research institutes; early positioning drove 15% YoY revenue growth at peak cycle.</li>
+      <li><strong>Digital Channel:</strong> Launched Alibaba webshop and WeChat platform for Fujikura; achieved CNY 200M/year in online distribution and 2M+ page views.</li>
+      <li><strong>Industry Advisory:</strong> Served as internal subject matter expert on China's optical communications market — FTTH/FTTB rollout, 5G fronthaul/backhaul fiber demand, data center interconnect (DCI) trends, and submarine cable ecosystem. Delivered structured market briefings to Japan and European HQ enabling product roadmap and M&amp;A screening decisions.</li>
+    </ul>
   </div>
 
-  <main class="resume-page resume-page-en">
-    <header class="resume-header">
-      <div class="resume-header-main">
-        <p class="resume-kicker">Executive Resume</p>
-        <h1>Alex Xu</h1>
-        <p class="resume-role">Sales Director · Business Development · Key Account Management</p>
-        <p class="resume-contact">
-          Shanghai, China · +86 185-2105-9077 · alexkyo@msn.com
-        </p>
-        <p class="resume-contact">
-          Mandarin (Native) · English (Fluent) · Japanese (Fluent)
-        </p>
-      </div>
-      <img class="resume-photo" src="profile-photo.jpg" alt="Alex Xu portrait">
-    </header>
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">OMRON Electronic Components Trading (Shanghai)</span>
+      <span class="job-dates">Jan 2010 – Aug 2014 &nbsp;(4 yr 7 mo)</span>
+    </div>
+    <div class="job-title">Sales Manager — East China</div>
+    <div class="job-context">Products: Inverters, PLCs, Relays, Sensors, Switches, Connectors</div>
+    <ul>
+      <li><strong>Regional Sales Management:</strong> Led a 4-person team (incl. 1 Japanese national); annual sales USD 4M; department YoY growth 108%.</li>
+      <li><strong>0-to-1 Market Entry (Central China):</strong> Independently established OMRON's Central China office in Wuhan; achieved CNY 2M in Year 1; promoted to Sales Manager upon return to Shanghai.</li>
+      <li><strong>Key Accounts:</strong> Panasonic, Mitsubishi, Siemens, Schneider, ABB, Fuji Electric, Hitachi, Yaskawa — spanning industrial control, medical, power, building automation, and home appliance sectors.</li>
+      <li><strong>Cross-Cultural Operations:</strong> Biannual reporting visits to Japan HQ; primary channel for transmitting China market insights to Japanese leadership.</li>
+    </ul>
+  </div>
 
-    <section class="resume-section">
-      <h2>Profile</h2>
-      <p>
-        Commercial leader with 20+ years across Fujikura, OMRON, and TDK in electronics components,
-        optical communications, and industrial automation. Built new markets from zero, led cross-city sales teams,
-        managed CNY 400M annual P&amp;L, and translated China market intelligence into strategic decisions for Japan and Europe headquarters.
-      </p>
-    </section>
+  <div class="job">
+    <div class="job-header">
+      <span class="job-company">TDK (Shanghai) International Trading Co., Ltd.</span>
+      <span class="job-dates">May 2004 – Jan 2010 &nbsp;(5 yr 8 mo)</span>
+    </div>
+    <div class="job-title">Sales Supervisor — Japanese Key Accounts, East China</div>
+    <div class="job-context">Products: MLCC Capacitors, Inductors, Sensors, Magnetic Components</div>
+    <ul>
+      <li><strong>Key Account Management:</strong> Managed major Japanese electronics OEMs in East China (consumer electronics, automotive, industrial); average monthly sales ~CNY 10M (≈JPY 100M); market share at Hitachi and Mitsumi exceeded 70%.</li>
+      <li><strong>Revenue Growth:</strong> Delivered 140% and 130% YoY growth in FY2006 and FY2007; secured 10+ new Design-Ins annually.</li>
+      <li><strong>Award:</strong> NIDEC Best Supplier of the Year 2007.</li>
+      <li><strong>Key Accounts:</strong> Pioneer, Alpine, Alps, Hitachi, Mitsumi, NIDEC Group.</li>
+    </ul>
+  </div>
+</section>
 
-    <section class="resume-section">
-      <h2>Selected Strengths</h2>
-      <div class="chip-row">
-        <span>0-to-1 Market Development</span>
-        <span>Strategic Account Leadership</span>
-        <span>P&amp;L Ownership</span>
-        <span>Market Intelligence</span>
-        <span>Channel Strategy</span>
-        <span>Telecom &amp; Data Center Infrastructure</span>
-      </div>
-    </section>
+<section class="section">
+  <div class="section-title">Education</div>
+  <div class="edu-row">
+    <span class="edu-school">Fudan University &nbsp;<small style="font-weight:400;color:#666;font-size:11px;">985 / 211 — Top 10 China</small></span>
+    <span class="edu-dates">Sep 2016 – Sep 2018</span>
+  </div>
+  <div class="edu-degree">MBA / EMBA · Business Administration</div>
+  <br>
+  <div class="edu-row">
+    <span class="edu-school">Shanghai University &nbsp;<small style="font-weight:400;color:#666;font-size:11px;">211</small></span>
+    <span class="edu-dates">Sep 2000 – Jun 2004</span>
+  </div>
+  <div class="edu-degree">Bachelor · Business Administration &nbsp;(Minor: Law)</div>
+</section>
 
-    <section class="resume-section">
-      <h2>Experience</h2>
+<section class="section">
+  <div class="section-title">Skills &amp; Certifications</div>
+  <div class="skills-grid">
+    <dl><dt>Languages:</dt><dd>Mandarin (Native) · English (Fluent) · Japanese (Fluent)</dd></dl>
+    <dl><dt>Tools:</dt><dd>MS Excel (Expert) · Pipeline Modeling · CRM</dd></dl>
+    <dl><dt>JLPT N1</dt><dd>— Feb 1999</dd></dl>
+    <dl><dt>Graduate English Proficiency (Level II)</dt><dd>— Dec 2015</dd></dl>
+  </div>
+</section>
+</div>
 
-      <article class="role-block">
-        <div class="role-head">
-          <div>
-            <h3>Fujikura (China) Co., Ltd.</h3>
-            <p>Deputy Sales Director, China Sales &amp; Marketing</p>
-          </div>
-          <p>2014.08 - 2025.05</p>
-        </div>
-        <ul>
-          <li>Led a 19-person team across Shanghai, Beijing, and Shenzhen with full ownership of a CNY 400M annual P&amp;L.</li>
-          <li>Managed strategic relationships with China Mobile, China Telecom, China Unicom, Huawei, and ZTE, feeding customer insight into pricing and roadmap decisions.</li>
-          <li>Built a CNY 200M+ project pipeline model and opened banking and government data center verticals, generating CNY 5M in first-year revenue.</li>
-        </ul>
-      </article>
-
-      <article class="role-block">
-        <div class="role-head">
-          <div>
-            <h3>OMRON Electronic Components Trading (Shanghai)</h3>
-            <p>Sales Manager, East China</p>
-          </div>
-          <p>2010.01 - 2014.08</p>
-        </div>
-        <ul>
-          <li>Led a 4-person regional team and delivered 108% year-on-year growth with approximately USD 4M annual sales.</li>
-          <li>Established OMRON's Central China office in Wuhan independently and achieved CNY 2M revenue in Year 1.</li>
-          <li>Developed key accounts including Panasonic, Mitsubishi, Siemens, Schneider, ABB, Hitachi, and Yaskawa.</li>
-        </ul>
-      </article>
-
-      <article class="role-block">
-        <div class="role-head">
-          <div>
-            <h3>TDK (Shanghai) International Trading Co., Ltd.</h3>
-            <p>Sales Supervisor, Japanese Key Accounts, East China</p>
-          </div>
-          <p>2004.05 - 2010.01</p>
-        </div>
-        <ul>
-          <li>Managed major Japanese OEM accounts in East China with monthly sales around CNY 10M.</li>
-          <li>Delivered 140% and 130% year-on-year growth in FY2006 and FY2007 while adding 10+ design-ins annually.</li>
-          <li>Won the NIDEC Best Supplier of the Year 2007 recognition.</li>
-        </ul>
-      </article>
-    </section>
-
-    <section class="resume-two-column">
-      <section class="resume-section">
-        <h2>Education</h2>
-        <div class="mini-block">
-          <h3>Fudan University</h3>
-          <p>MBA / EMBA, Business Administration · 2016-2018</p>
-        </div>
-        <div class="mini-block">
-          <h3>Shanghai University</h3>
-          <p>Bachelor, Business Administration (Minor in Law) · 2000-2004</p>
-        </div>
-      </section>
-
-      <section class="resume-section">
-        <h2>Credentials</h2>
-        <div class="mini-block">
-          <h3>Languages</h3>
-          <p>Mandarin, English, Japanese</p>
-        </div>
-        <div class="mini-block">
-          <h3>Certifications</h3>
-          <p>JLPT N1 · Graduate English Proficiency (Level II)</p>
-        </div>
-      </section>
-    </section>
-  </main>
-
-  <script src="js/script.js"></script>
+<script src="./js/script.js"></script>
 </body>
 </html>
