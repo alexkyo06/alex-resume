@@ -1,147 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Xu | Resume Portfolio</title>
-  <meta name="description" content="Bilingual executive resume portfolio for Alex Xu, featuring an English resume, a Chinese resume, and downloadable one-page PDF versions.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/site.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Xu Resume</title>
+<style>
+  body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    color: #1f2937;
+    background: #f5f7fb;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #d8e0ea;
+    border-radius: 14px;
+    padding: 32px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+  h1 {
+    margin: 0 0 8px;
+    color: #1a3a5c;
+    font-size: 2rem;
+  }
+  p {
+    margin: 0 0 18px;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+  .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  a {
+    display: block;
+    padding: 16px 18px;
+    border: 1px solid #d8e0ea;
+    border-radius: 10px;
+    color: #1a3a5c;
+    text-decoration: none;
+    background: #fbfdff;
+    font-weight: 600;
+  }
+  a span {
+    display: block;
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 0.92rem;
+    font-weight: 400;
+  }
+  @media (max-width: 700px) {
+    .links { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
-  <div class="site-shell">
-    <header class="hero">
-      <nav class="topbar">
-        <a class="brand" href="./">Alex Xu</a>
-        <div class="topbar-links">
-          <a href="resume-en.html">English Resume</a>
-          <a href="resume-zh.html">中文简历</a>
-          <a href="pdf/Alex-Xu-Resume-EN.pdf">PDF</a>
-        </div>
-      </nav>
-
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Bilingual Executive Resume</p>
-          <h1>Commercial leadership for industrial and technology markets in China.</h1>
-          <p class="hero-text">
-            20+ years across Fujikura, OMRON, and TDK. Built businesses from zero, led multi-city teams,
-            advised Japan and Europe headquarters, and managed strategic accounts across telecom, electronics,
-            automation, and data center infrastructure.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="resume-en.html">View English Resume</a>
-            <a class="button button-secondary" href="resume-zh.html">查看中文简历</a>
-          </div>
-          <ul class="hero-metrics">
-            <li><strong>20+</strong><span>Years in B2B sales & strategy</span></li>
-            <li><strong>CNY 400M</strong><span>Annual P&amp;L ownership</span></li>
-            <li><strong>3 Languages</strong><span>Mandarin, English, Japanese</span></li>
-          </ul>
-        </div>
-
-        <aside class="hero-card">
-          <img src="profile-photo.jpg" alt="Alex Xu portrait">
-          <div class="hero-card-body">
-            <p class="hero-card-name">Alex Xu <span>许炜</span></p>
-            <p class="hero-card-title">Sales Director · Business Development · Key Account Management</p>
-            <ul class="hero-card-list">
-              <li>Shanghai, China</li>
-              <li>Fudan MBA</li>
-              <li>Japan HQ &amp; Europe HQ reporting</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </header>
-
-    <main>
-      <section class="section section-contrast">
-        <div class="section-heading">
-          <p class="eyebrow">Highlights</p>
-          <h2>Built for recruiters, hiring managers, and direct outreach.</h2>
-        </div>
-        <div class="highlights-grid">
-          <article class="panel">
-            <h3>Market Builder</h3>
-            <p>Opened OMRON's Central China office independently and created new banking and government data center verticals at Fujikura.</p>
-          </article>
-          <article class="panel">
-            <h3>Strategic Operator</h3>
-            <p>Owned multi-hundred-million RMB P&amp;Ls, revenue forecasting, channel strategy, and executive account relationships.</p>
-          </article>
-          <article class="panel">
-            <h3>Cross-Border Translator</h3>
-            <p>Converted China market signals into structured recommendations for global headquarters across Japan and Europe.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Resume Formats</p>
-          <h2>Separate screen and print experiences, with one-page PDFs for formal delivery.</h2>
-        </div>
-        <div class="resume-grid">
-          <article class="resume-card">
-            <p class="resume-card-label">English</p>
-            <h3>One-page executive resume</h3>
-            <p>Optimized for multinational hiring, direct applications, LinkedIn outreach, and recruiter review.</p>
-            <div class="resume-card-actions">
-              <a class="button button-primary" href="resume-en.html">Open HTML</a>
-              <a class="button button-secondary" href="pdf/Alex-Xu-Resume-EN.pdf">Download PDF</a>
-            </div>
-          </article>
-          <article class="resume-card">
-            <p class="resume-card-label">中文</p>
-            <h3>单页中文正式简历</h3>
-            <p>更适合国内招聘、猎头沟通、企业投递，以及需要快速理解业务成绩的场景。</p>
-            <div class="resume-card-actions">
-              <a class="button button-primary" href="resume-zh.html">打开 HTML</a>
-              <a class="button button-secondary" href="pdf/Alex-Xu-Resume-ZH.pdf">下载 PDF</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Career Snapshot</p>
-          <h2>Experience shaped by telecom infrastructure, industrial automation, and component ecosystems.</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <p class="timeline-year">2014-2025</p>
-            <div>
-              <h3>Fujikura (China)</h3>
-              <p>Deputy Sales Director leading China sales &amp; marketing, major telecom accounts, and data center growth.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <p class="timeline-year">2010-2014</p>
-            <div>
-              <h3>OMRON</h3>
-              <p>Sales Manager for East China, including 0-to-1 office expansion in Central China and industrial key account growth.</p>
-            </div>
-          </article>
-          <article class="timeline-item">
-            <p class="timeline-year">2004-2010</p>
-            <div>
-              <h3>TDK</h3>
-              <p>Managed Japanese key accounts in East China and drove strong design-in and market-share growth.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <p>Prepared for direct application, recruiter sharing, and clean PDF export.</p>
-    </footer>
+  <div class="wrap">
+    <h1>Alex Xu Resume</h1>
+    <p>Original layout version, split from the source resume into separate English and Chinese HTML/PDF files.</p>
+    <div class="links">
+      <a href="./resume-en.html">English HTML<span>Original English layout</span></a>
+      <a href="./resume-zh.html">中文 HTML<span>原版中文排版</span></a>
+      <a href="./pdf/Alex-Xu-Resume-EN.pdf">English PDF<span>One-page export</span></a>
+      <a href="./pdf/Alex-Xu-Resume-ZH.pdf">中文 PDF<span>单页导出版</span></a>
+    </div>
   </div>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
