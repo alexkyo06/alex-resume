@@ -1,12 +1,23 @@
 # Alex Resume
 
-Source-preserved split version of the resume:
+Bilingual resume site for Alex Xu / 许炜.
 
-- `resume-en.html`: English HTML
-- `resume-zh.html`: Chinese HTML
+This repository is the resume project itself, separate from the profile repository at [alexkyo06/alexkyo06](https://github.com/alexkyo06/alexkyo06).
+
+## Contents
+
+- `index.html`: landing page
+- `resume-en.html`: English resume
+- `resume-zh.html`: Chinese resume
 - `pdf/Alex-Xu-Resume-EN.pdf`: English PDF
 - `pdf/Alex-Xu-Resume-ZH.pdf`: Chinese PDF
 
-Open the site entry from:
+## Purpose
 
-- `index.html`
+- Keep resume assets in one place
+- Publish a clean bilingual resume site
+- Update resume content without mixing it into the GitHub profile README
+
+## Related
+
+- Profile: [alexkyo06/alexkyo06](https://github.com/alexkyo06/alexkyo06)
