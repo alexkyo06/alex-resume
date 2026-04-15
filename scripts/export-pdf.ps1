@@ -23,8 +23,8 @@ $zhHtml = (Resolve-Path (Join-Path $root "resume-zh.html")).Path
 $enPdf = Join-Path $pdfDir "Alex-Xu-Resume-EN.pdf"
 $zhPdf = Join-Path $pdfDir "Alex-Xu-Resume-ZH.pdf"
 
-& $edge --headless --disable-gpu --print-to-pdf="$enPdf" "file:///$($enHtml -replace '\\','/')"
-& $edge --headless --disable-gpu --print-to-pdf="$zhPdf" "file:///$($zhHtml -replace '\\','/')"
+& $edge --headless --disable-gpu --print-to-pdf-no-header --print-to-pdf="$enPdf" "file:///$($enHtml -replace '\\','/')"
+& $edge --headless --disable-gpu --print-to-pdf-no-header --print-to-pdf="$zhPdf" "file:///$($zhHtml -replace '\\','/')"
 
 Write-Host "Exported:"
 Write-Host $enPdf

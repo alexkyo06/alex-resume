@@ -9,8 +9,8 @@ This repository is the resume project itself, separate from the profile reposito
 - `index.html`: landing page
 - `resume-en.html`: English resume
 - `resume-zh.html`: Chinese resume
-- `pdf/Alex-Xu-Resume-EN.pdf`: English PDF
-- `pdf/Alex-Xu-Resume-ZH.pdf`: Chinese PDF
+- `pdf/Alex-Xu-Resume-EN-2026-04-15.pdf`: English PDF
+- `pdf/Alex-Xu-Resume-ZH-2026-04-15.pdf`: Chinese PDF
 
 ## Purpose
 
