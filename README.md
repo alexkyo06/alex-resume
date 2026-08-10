@@ -18,6 +18,11 @@ This repository is the resume project itself, separate from the profile reposito
 - Publish a clean bilingual resume site
 - Update resume content without mixing it into the GitHub profile README
 
+## Public Privacy Boundary
+
+- This public repository contains redacted CVs without a personal phone number.
+- Full application versions and interview preparation materials stay outside GitHub.
+
 ## Related
 
 - Profile: [alexkyo06/alexkyo06](https://github.com/alexkyo06/alexkyo06)
